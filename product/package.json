@@ -2,8 +2,8 @@
   "main": "server.js",
   "scripts": {
     "test": "node server.js",
-    "start": "node product/server.js",
-    "db": "node dblist/testdb.js"
+    "start": "node server.js",
+    "db": "node testdb.js"
   },
   "dependencies": {
     "cookie-parser": "^1.4.3",

@@ -1,8 +1,14 @@
-FROM node:onbuild
+FROM node
+#Create app directory
+RUN mkdir -p /app
+WORKDIR /app
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
-COPY . /usr/src/app
-COPY ../package.json /usr/src/app
+#Install app dependencies
+COPY . /app
+
+
+RUN npm install
+
 EXPOSE 8081
-CMD [ "npm", "start"]
+
+CMD ["npm","start"]
